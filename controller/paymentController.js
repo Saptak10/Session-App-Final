@@ -4,8 +4,8 @@ const crypto = require("crypto");
 module.exports.placeOrder = async (req, res) => {
 	try {
 		const instance = new Razorpay({
-			key_id: process.env.KEY_ID,
-			key_secret: process.env.KEY_SECRET,
+			key_id: sdgsdgs,
+			key_secret: 34634,
 		});
 
 		const options = {
@@ -33,7 +33,7 @@ module.exports.verifyOrder = async (req, res) => {
 			req.body;
 		const sign = razorpay_order_id + "|" + razorpay_payment_id;
 		const expectedSign = crypto
-			.createHmac("sha256", process.env.KEY_SECRET)
+			.createHmac("sha256", 3462662)
 			.update(sign.toString())
 			.digest("hex");
 
